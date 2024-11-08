@@ -1,0 +1,412 @@
+/* Container */
+.booking-container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgb(3, 7, 18), rgb(17, 24, 39), rgb(31, 41, 55));
+    color: white;
+    padding: 2rem 0;
+  }
+  
+  .booking-wrapper {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  
+  /* Progress Steps */
+  .progress-container {
+    margin-bottom: 2rem;
+  }
+  
+  .progress-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .progress-step {
+    display: flex;
+    align-items: center;
+  }
+  
+  .progress-step.active {
+    color: white;
+    font-weight: 500;
+  }
+  
+  .progress-step.inactive {
+    color: rgb(209, 213, 219);
+  }
+  
+  .step-circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+  }
+  
+  .step-circle.active {
+    border-color: rgb(167, 139, 250);
+    background-color: rgba(167, 139, 250, 0.2);
+    color: white;
+  }
+  
+  .step-circle.inactive {
+    border-color: rgb(209, 213, 219);
+    color: rgb(209, 213, 219);
+  }
+  
+  .step-label {
+    margin-left: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .step-label {
+      display: none;
+    }
+  }
+  
+  .progress-bar {
+    height: 0.5rem;
+    background-color: rgb(31, 41, 55);
+    border-radius: 9999px;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(to right, rgb(147, 51, 234), rgb(59, 130, 246));
+    border-radius: 9999px;
+    transition: width 300ms ease;
+  }
+  
+  /* Alert Styles */
+  .alert {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid;
+  }
+  
+  .alert-error {
+    background-color: rgba(220, 38, 38, 0.1);
+    border-color: rgba(220, 38, 38, 0.3);
+    color: rgb(248, 113, 113);
+  }
+  
+  .alert-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    border-color: rgba(16, 185, 129, 0.3);
+    color: rgb(52, 211, 153);
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: rgba(17, 24, 39, 0.9);
+    border: 1px solid rgb(55, 65, 81);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgb(55, 65, 81);
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+  }
+  
+  /* Business Info Card */
+  .info-card {
+    background-color: rgba(17, 24, 39, 0.9);
+    border: 1px solid rgb(55, 65, 81);
+  }
+  
+  .info-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .info-icon-container {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    background-color: rgba(167, 139, 250, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(167, 139, 250);
+  }
+  
+  .info-text h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
+  
+  .info-text p {
+    color: rgb(209, 213, 219);
+    margin: 0.25rem 0 0 0;
+  }
+  
+  /* Date Selection */
+  .time-selection {
+    width: 100%;
+  }
+  
+  .date-selector {
+    background-color: rgba(31, 41, 55, 0.8);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgb(55, 65, 81);
+  }
+  
+  .date-input-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .date-input {
+    background-color: rgb(17, 24, 39);
+    border: 1px solid rgb(75, 85, 99);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .date-input:focus {
+    outline: none;
+    border-color: rgb(167, 139, 250);
+  }
+  
+  /* Time Slots */
+  .slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  
+  .time-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: rgba(17, 24, 39, 0.6);
+    border: 1px solid rgb(75, 85, 99);
+    border-radius: 0.5rem;
+    color: rgb(209, 213, 219);
+    cursor: pointer;
+    transition: all 200ms ease;
+    font-size: 0.875rem;
+  }
+  
+  .time-slot:hover {
+    border-color: rgb(167, 139, 250);
+    color: white;
+    transform: translateY(-1px);
+  }
+  
+  .time-slot.selected {
+    background-color: rgba(167, 139, 250, 0.2);
+    border-color: rgb(167, 139, 250);
+    color: white;
+  }
+  
+  .no-slots {
+    text-align: center;
+    padding: 2rem;
+    color: rgb(209, 213, 219);
+    background-color: rgba(17, 24, 39, 0.6);
+    border-radius: 0.5rem;
+    border: 1px dashed rgb(75, 85, 99);
+  }
+  
+  /* Form Styles */
+  .booking-form {
+    width: 100%;
+  }
+  
+  .form-container {
+    background-color: rgba(31, 41, 55, 0.8);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgb(55, 65, 81);
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group:last-child {
+    margin-bottom: 0;
+  }
+  
+  .form-label {
+    display: block;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: rgb(17, 24, 39);
+    border: 1px solid rgb(75, 85, 99);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .input-field {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .input-field::placeholder {
+    color: rgb(156, 163, 175);
+  }
+  
+  .input-field:focus {
+    outline: none;
+  }
+  
+  /* Buttons */
+  .back-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(209, 213, 219);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    transition: all 200ms ease;
+  }
+  
+  .back-button:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .submit-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(to right, rgb(147, 51, 234), rgb(59, 130, 246));
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 200ms ease;
+  }
+  
+  .submit-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(147, 51, 234, 0.3);
+  }
+  
+  /* Confirmation */
+  .confirmation-container {
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+  
+  .confirmation-icon {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 9999px;
+    background-color: rgba(167, 139, 250, 0.2);
+    display: flex;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+    color: rgb(167, 139, 250);
+  }
+  
+  .confirmation-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .confirmation-details {
+    color: rgb(209, 213, 219);
+    margin-bottom: 1.5rem;
+  }
+  
+  .details-box {
+    background-color: rgba(31, 41, 55, 0.8);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(55, 65, 81);
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+  
+  .details-box p {
+    margin: 0.5rem 0;
+    color: rgb(209, 213, 219);
+  }
+  
+  .details-box strong {
+    color: white;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 640px) {
+    .booking-wrapper {
+      padding: 1rem;
+    }
+  
+    .card-header {
+      padding: 1rem;
+    }
+  
+    .card-content {
+      padding: 1rem;
+    }
+  
+    .form-container {
+      padding: 1rem;
+    }
+  
+    .slots-grid {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+  
+    .time-slot {
+      padding: 0.75rem;
+      font-size: 0.75rem;
+    }
+  }
