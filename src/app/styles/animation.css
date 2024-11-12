@@ -1,0 +1,111 @@
+/* Background Animations */
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Content Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Utility Animation Classes */
+.animate-float {
+  animation: float infinite linear;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slideUp {
+  opacity: 0;
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.animate-fadeScale {
+  opacity: 0;
+  animation: fadeScale 0.8s ease-out forwards;
+}
+
+/* Hero Section Styles */
+.hero-gradient {
+  @apply bg-gradient-to-br from-purple-50 to-blue-50;
+}
+
+.hero-title {
+  @apply text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600;
+}
+
+.floating-particle {
+  @apply absolute w-4 h-4 bg-blue-500 rounded-full opacity-20 animate-float;
+}
+
+/* Card Styles */
+.feature-card {
+  @apply p-6 backdrop-blur-lg bg-white/90 hover:shadow-lg transition-all duration-300 cursor-pointer;
+}
+
+.feature-icon-container {
+  @apply p-2 bg-blue-100 rounded-lg;
+}
+
+/* Button Hover Effects */
+.cta-button {
+  @apply bg-blue-600 hover:bg-blue-700 transition-colors duration-300;
+}
+
+.learn-more-button {
+  @apply group-hover:text-purple-500 transition-colors duration-300;
+}
+
+/* Grid Layout */
+.features-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+/* Responsive Containers */
+.content-container {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+/* Section Spacing */
+.section-spacing {
+  @apply py-20;
+}
