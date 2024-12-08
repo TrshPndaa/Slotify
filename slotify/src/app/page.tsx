@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [activePopup, setActivePopup] = useState<string | null>(null);
@@ -18,15 +19,15 @@ export default function Home() {
       {/* Navigation */}
       <nav className="p-6 flex justify-between">
         <div className="flex gap-8">
-          <a href="/register" className="text-gray-600 hover:text-gray-900 transition-colors">
+          <Link href="/register" className="text-gray-600 hover:text-gray-900 transition-colors">
             REGISTER WITH US
-          </a>
+          </Link>
           <button className="text-gray-600 hover:text-gray-900 transition-colors">BOOK WITH A BUSINESS</button>
         </div>
         <div>
-          <a href="/dev" className="text-gray-600 hover:text-gray-900 transition-colors">
+          <Link href="/dev" className="text-gray-600 hover:text-gray-900 transition-colors">
             DEVELOPMENT ROADMAP
-          </a>
+          </Link>
         </div>
       </nav>
 
@@ -74,7 +75,7 @@ export default function Home() {
           </div>
 
           <div id="whoWeAre" className={`${activePopup === 'whoWeAre' ? '' : 'hidden'} absolute top-12 left-1/2 -translate-x-1/2 bg-white p-6 rounded-lg shadow-lg w-96 text-base text-gray-700`}>
-            We're a startup founded by a single developer with a mission to make professional booking tools accessible to businesses of all sizes. Our business-first approach means we focus on your success.
+            We&apos;re a startup founded by a single developer with a mission to make professional booking tools accessible to businesses of all sizes. Our business-first approach means we focus on your success.
           </div>
         </div>
       </main>

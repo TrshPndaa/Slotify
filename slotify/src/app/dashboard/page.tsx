@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { FaHome, FaArrowLeft } from "react-icons/fa";
-import { IconBaseProps } from "react-icons";
+import Link from "next/link";
 
 interface Service {
   id: string;
@@ -70,14 +70,14 @@ export default function Dashboard() {
     <div className="min-h-screen bg-gray-50">
       {/* Home Button */}
       <div className="fixed top-4 left-4 z-50">
-        <a 
+        <Link 
           href="/"
           className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-md hover:bg-gray-50 transition-colors text-gray-700"
         >
           <FaArrowLeft size={14} />
           <FaHome size={18} />
           <span>Home</span>
-        </a>
+        </Link>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

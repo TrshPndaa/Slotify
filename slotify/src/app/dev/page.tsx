@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 interface BlogPost {
   id: string;
@@ -33,7 +34,7 @@ export default function DevRoadmap() {
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Home Button */}
-        <a 
+        <Link 
           href="/"
           className="inline-flex items-center mb-8 text-pink-600 hover:text-pink-700 transition-colors"
         >
@@ -41,7 +42,7 @@ export default function DevRoadmap() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
           </svg>
           Back to Home
-        </a>
+        </Link>
 
         <h1 className="text-4xl font-bold text-gray-900 mb-12">Development Roadmap</h1>
         
